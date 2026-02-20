@@ -1,0 +1,44 @@
+node_modules/
+.env
+.env.local
+dist/
+build/
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# Hardhat files
+cache/
+artifacts/
+typechain-types/
+
+# Test files
+coverage/
+coverage.json
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build outputs
+dist/
+build/
+out/
+
+# Dependencies
+node_modules/
+package-lock.json.bak
+yarn.lock.bak

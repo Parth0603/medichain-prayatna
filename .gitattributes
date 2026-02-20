@@ -1,0 +1,12 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Solidity files
+*.sol linguist-language=Solidity
+
+# JavaScript files
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+
+# Exclude documentation from language stats
+*.md linguist-documentation
