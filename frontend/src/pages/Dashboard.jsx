@@ -38,10 +38,21 @@ function Dashboard() {
       ])
 
       setStats(statsRes.data)
-      setBatches(batchesRes.data)
-      setActivity(activityRes.data)
+      setBatches(Array.isArray(batchesRes.data) ? batchesRes.data : [])
+      setActivity(Array.isArray(activityRes.data) ? activityRes.data : [])
     } catch (error) {
       console.error('Error fetching dashboard data:', error)
+      // Set empty arrays on error to prevent crashes
+      setBatches([])
+      setActivity([])
+      setStats({
+        totalBatches: 0,
+        activeBatches: 0,
+        flaggedBatches: 0,
+        expiredBatches: 0,
+        totalShipments: 0,
+        temperatureBreaches: 0
+      })
     } finally {
       setLoading(false)
     }
